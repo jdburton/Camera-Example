@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
@@ -58,7 +57,7 @@ public class DisplayInfoActivity extends Activity {
 	/**
 	 * @fn private void setupActionBar()
 	 * 
-	 * Set up the {@link android.app.ActionBar}, if the API is available.
+	 * Set up the android.app.ActionBar, if the API is available.
 	 * This enables the up/home button to allow users to return to the main screen.
 	 * 
 	 */
