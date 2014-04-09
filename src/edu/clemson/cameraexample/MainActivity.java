@@ -1,8 +1,6 @@
 package edu.clemson.cameraexample;
 
-/**
-	 * 
-	 */
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -14,9 +12,11 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.provider.MediaStore.Video.Thumbnails;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -42,8 +42,8 @@ public class MainActivity extends Activity  {
 	private static final int VIDEO_REQUEST_CODE = 4;
 	
 	// Are we using high or low quality video?
-	public static final int LOW_QUALITY_VIDEO = 0;
-	public static final int HIGH_QUALITY_VIDEO = 1;
+	private static final int LOW_QUALITY_VIDEO = 0;
+	private static final int HIGH_QUALITY_VIDEO = 1;
 	
 	// Where do we store new videos and images. 
 	// Should be in the subdirectory for this app, not the gallery
@@ -149,30 +149,43 @@ public class MainActivity extends Activity  {
 		return true;
 	}
 	
+	/**
+	 * @fn public boolean onOptionsItemSelected(MenuItem item)
+	 * @brief Handles menu item selection. 
+	 * 
+	 * @param item MenuItem that was selected
+	 * @return true  
+	 */
+	
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
  
-        case R.id.action_select_photo:
-        	dispatchSelectImageIntent();
-        	break;
-        	
-        case R.id.action_select_video:
-        	dispatchSelectVideoIntent();
-        	break;
-        	
-        case R.id.action_take_photo:
-        	dispatchTakePictureIntent();
-        	break;
-
-        case R.id.action_take_video:
-        	dispatchTakeVideoIntent(LOW_QUALITY_VIDEO);
-        	break;
-        	
-        case R.id.action_take_video_hd:
-        	dispatchTakeVideoIntent(HIGH_QUALITY_VIDEO);
-        	break;
-        
+	        case R.id.action_select_photo:
+	        	dispatchSelectImageIntent();
+	        	break;
+	        	
+	        case R.id.action_select_video:
+	        	dispatchSelectVideoIntent();
+	        	break;
+	        	
+	        case R.id.action_take_photo:
+	        	dispatchTakePictureIntent();
+	        	break;
+	
+	        case R.id.action_take_video:
+	        	dispatchTakeVideoIntent(LOW_QUALITY_VIDEO);
+	        	break;
+	        	
+	        case R.id.action_take_video_hd:
+	        	dispatchTakeVideoIntent(HIGH_QUALITY_VIDEO);
+	        	break;
+	        	
+	        case R.id.action_about:
+	        	Intent intent = new Intent(this, DisplayInfoActivity.class);
+		    	startActivity(intent);
+	        	break;
+	        
         }
  
         return super.onOptionsItemSelected(item);
@@ -181,7 +194,7 @@ public class MainActivity extends Activity  {
 	
 	/**
 	 *
-	 * @fn protected void dispatchSelectImageIntent
+	 * @fn protected void dispatchSelectImageIntent()
 	 * @brief Start the intent to select an image.
 	 * 
 	 * 
@@ -202,13 +215,13 @@ public class MainActivity extends Activity  {
     
 	/**
 	 *
-	 * @fn protected void dispatchSelectVideoIntent
+	 * @fn protected void dispatchSelectVideoIntent()
 	 * @brief Start the intent to select an video.
 	 * 
 	 * 
 	 */
 	
-    public void dispatchSelectVideoIntent()
+    protected void dispatchSelectVideoIntent()
     {
     	/// See more about working with an image picker from http://www.vogella.com/tutorials/AndroidCamera/article.html
 
@@ -223,14 +236,14 @@ public class MainActivity extends Activity  {
     
 	/**
 	 *
-	 * @fn protected void dispatchSelectVideoIntent
+	 * @fn protected void  dispatchTakePictureIntent()
 	 * @brief Start the intent take a picture with the camera. 
 	 * 
 	 * 
 	 */
 
     
-    public void dispatchTakePictureIntent() {
+    protected void dispatchTakePictureIntent() {
 		
 		
 		/// Started with this http://developer.android.com/training/camera/photobasics.html
@@ -290,13 +303,14 @@ public class MainActivity extends Activity  {
 	
 	/**
 	 *
-	 * @fn protected void dispatchSelectVideoIntent
-	 * @brief Start the intent take a picture with the camera. 
+	 * @fn protected void dispatchTakeVideoIntent(int videoQuality)
 	 * 
+	 * @brief Start the intent take a video with the camera. 
+	 * @param videoQuality LOW_QUALITY_VIDEO or HIGH_QUALITY_VIDEO
 	 * 
 	 */
 	
-    public void dispatchTakeVideoIntent(int videoQuality) {
+    protected void dispatchTakeVideoIntent(int videoQuality) {
 		
 
 
@@ -347,7 +361,7 @@ public class MainActivity extends Activity  {
 	 * 
 	 */
     
-	private File createVideoFile(int videoQuality) throws IOException {
+	protected File createVideoFile(int videoQuality) throws IOException {
 	    // Create an video file name
 	    String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 	    String videoFileName = "VID_" + timeStamp + "_";
@@ -378,8 +392,7 @@ public class MainActivity extends Activity  {
 	
 	/**
 	 * @fn protected void onSaveInstanceState(Bundle outState)
-	 * @brief Here we store the file url as it will be null after returning from camera
-	 * app.
+	 * @brief Here we store the file url as it will be null after returning from camera app.
 	 * 
 	 * 	  
 	 *  See #11 at: http://www.androidhive.info/2013/09/android-working-with-camera-api/ 
@@ -484,6 +497,12 @@ public class MainActivity extends Activity  {
 				
 				videoTextView.setText(data.getDataString());
 				videoView.setVideoURI(data.getData());
+				
+				/// Creating thumbnails for video: http://android-er.blogspot.com/2011/05/create-thumbnail-for-video-using.html
+		        // MINI_KIND: 512 x 384 thumbnail 
+				imageTextView.setText("Video Thumbnail");
+				imageView.setImageBitmap(ThumbnailUtils.createVideoThumbnail(data.getData().getPath(), Thumbnails.MINI_KIND));
+		        
 				videoView.start();
 				
 			}
@@ -521,6 +540,13 @@ public class MainActivity extends Activity  {
 					{
 						videoTextView.setText(mediaUri.getPath());
 						videoView.setVideoPath(mediaUri.getPath());
+						
+						
+						/// Creating thumbnails for video: http://android-er.blogspot.com/2011/05/create-thumbnail-for-video-using.html
+				        // MINI_KIND: 512 x 384 thumbnail 
+						imageTextView.setText("Video Thumbnail");
+						imageView.setImageBitmap(ThumbnailUtils.createVideoThumbnail(mediaUri.getPath(), Thumbnails.MINI_KIND));
+
 						videoView.start();
 					}
 					catch (Exception e)
