@@ -1,4 +1,19 @@
 var searchData=
 [
-  ['debug',['DEBUG',['../classedu_1_1clemson_1_1cameraexample_1_1_build_config.html#ab07392bb089defe976500c52c6dcd39a',1,'edu::clemson::cameraexample::BuildConfig']]]
+  ['about_5ftext',['about_text',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1string.html#a3b38b84a1567e2c6f8d32ca56cd64a9a',1,'edu::clemson::cameraexample::R::string']]],
+  ['action_5fabout',['action_about',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1id.html#abc9824278692cc07c130e25c91c2cd9f',1,'edu::clemson::cameraexample::R::id']]],
+  ['action_5fselect_5fphoto',['action_select_photo',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1id.html#a416bcf97989d8bee6f90ca7c8a50e64d',1,'edu.clemson.cameraexample.R.id.action_select_photo()'],['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1string.html#a7e2c310fb453ee710dff8a14b944ed12',1,'edu.clemson.cameraexample.R.string.action_select_photo()']]],
+  ['action_5fselect_5fvideo',['action_select_video',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1id.html#a06f2adf74bb4283573ed26ee549305f0',1,'edu.clemson.cameraexample.R.id.action_select_video()'],['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1string.html#ab521c8b38d290199ef812730c0c0543d',1,'edu.clemson.cameraexample.R.string.action_select_video()']]],
+  ['action_5fsettings',['action_settings',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1string.html#a23eff3357271dbf5fdbf5969b5d8ef53',1,'edu::clemson::cameraexample::R::string']]],
+  ['action_5ftake_5fphoto',['action_take_photo',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1id.html#ad6eb4002af2b79d8a9a87a816e0351a8',1,'edu.clemson.cameraexample.R.id.action_take_photo()'],['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1string.html#a9a43d5c87c3c66ce0b582120c79be61d',1,'edu.clemson.cameraexample.R.string.action_take_photo()']]],
+  ['action_5ftake_5fvideo',['action_take_video',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1id.html#a95b3e530289fb1d8ed36bdd0bf2d47e0',1,'edu.clemson.cameraexample.R.id.action_take_video()'],['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1string.html#ade5d47b1d7a9d96ee55000f1210d77e6',1,'edu.clemson.cameraexample.R.string.action_take_video()']]],
+  ['action_5ftake_5fvideo_5fhd',['action_take_video_hd',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1id.html#af5408c3f674dbae36cae255917f532a0',1,'edu.clemson.cameraexample.R.id.action_take_video_hd()'],['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1string.html#adea038bfafedd750c2f226242c5710fe',1,'edu.clemson.cameraexample.R.string.action_take_video_hd()']]],
+  ['activity_5fdisplay_5finfo',['activity_display_info',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1layout.html#a72d2ebe3bcc1858de060225e275a7c29',1,'edu::clemson::cameraexample::R::layout']]],
+  ['activity_5fhorizontal_5fmargin',['activity_horizontal_margin',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1dimen.html#a03a6bf3880ea298e290e45bdcc0834cb',1,'edu::clemson::cameraexample::R::dimen']]],
+  ['activity_5fmain',['activity_main',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1layout.html#ab268ccdd0dfe1ee2196495d1f209b0a9',1,'edu::clemson::cameraexample::R::layout']]],
+  ['activity_5fmain_5flandscape',['activity_main_landscape',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1layout.html#a06db20015be3ebe99566f42de0914f57',1,'edu::clemson::cameraexample::R::layout']]],
+  ['activity_5fvertical_5fmargin',['activity_vertical_margin',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1dimen.html#a5959912169a39958f2c3b54b213fa5ca',1,'edu::clemson::cameraexample::R::dimen']]],
+  ['app_5fname',['app_name',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1string.html#a964db21646b6b484ce7bdf22cffddd9f',1,'edu::clemson::cameraexample::R::string']]],
+  ['appbasetheme',['AppBaseTheme',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1style.html#ab298407b957b8829e19017f80489b617',1,'edu::clemson::cameraexample::R::style']]],
+  ['apptheme',['AppTheme',['../classedu_1_1clemson_1_1cameraexample_1_1_r_1_1style.html#a0765acf0dee52fc4fcbe7dca08350703',1,'edu::clemson::cameraexample::R::style']]]
 ];

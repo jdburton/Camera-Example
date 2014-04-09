@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['video_5fdirectory',['VIDEO_DIRECTORY',['../classedu_1_1clemson_1_1cameraexample_1_1_main_activity.html#aa2cb153e01d81948032aefdfbede65da',1,'edu::clemson::cameraexample::MainActivity']]],
-  ['video_5frequest_5fcode',['VIDEO_REQUEST_CODE',['../classedu_1_1clemson_1_1cameraexample_1_1_main_activity.html#aa1e2c6d1b24c747f8bc7ce6e2b9cf9d8',1,'edu::clemson::cameraexample::MainActivity']]],
-  ['videotextview',['videoTextView',['../classedu_1_1clemson_1_1cameraexample_1_1_main_activity.html#a4ad71ea736036bd7d55fb9654d9cd69e',1,'edu::clemson::cameraexample::MainActivity']]],
-  ['videoview',['videoView',['../classedu_1_1clemson_1_1cameraexample_1_1_main_activity.html#a89d3afcdb0db5c559b0f9cfedb18054f',1,'edu::clemson::cameraexample::MainActivity']]]
+  ['r',['R',['../classedu_1_1clemson_1_1cameraexample_1_1_r.html',1,'edu::clemson::cameraexample']]],
+  ['r_2ejava',['R.java',['../_r_8java.html',1,'']]],
+  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['request_5fimage_5fcapture',['REQUEST_IMAGE_CAPTURE',['../classedu_1_1clemson_1_1cameraexample_1_1_main_activity.html#a6c3cc5dc2375b98477dc89f54386005d',1,'edu::clemson::cameraexample::MainActivity']]],
+  ['request_5fvideo_5fcapture',['REQUEST_VIDEO_CAPTURE',['../classedu_1_1clemson_1_1cameraexample_1_1_main_activity.html#a2871b6c0e68057f1321a03b800bb8e82',1,'edu::clemson::cameraexample::MainActivity']]],
+  ['rotateandsetimage',['rotateAndSetImage',['../classedu_1_1clemson_1_1cameraexample_1_1_main_activity.html#acd5031072f0129031cdb826bb6c6e6fd',1,'edu::clemson::cameraexample::MainActivity']]]
 ];
