@@ -7,8 +7,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -498,10 +500,11 @@ public class MainActivity extends Activity  {
 				videoTextView.setText(data.getDataString());
 				videoView.setVideoURI(data.getData());
 				
-				/// Creating thumbnails for video: http://android-er.blogspot.com/2011/05/create-thumbnail-for-video-using.html
+				/// Creating thumbnails for video from URI: http://stackoverflow.com/questions/8383377/android-get-thumbnail-of-image-stored-on-sdcard-whose-path-is-known
+				// MICRO_KIND: 96 x 96 thumbnail
 		        // MINI_KIND: 512 x 384 thumbnail 
 				imageTextView.setText("Video Thumbnail");
-				imageView.setImageBitmap(ThumbnailUtils.createVideoThumbnail(data.getData().getPath(), Thumbnails.MINI_KIND));
+				imageView.setImageBitmap(MediaStore.Video.Thumbnails.getThumbnail(getContentResolver(), Long.parseLong(data.getData().getLastPathSegment()), Thumbnails.MINI_KIND, null));
 		        
 				videoView.start();
 				
@@ -542,8 +545,9 @@ public class MainActivity extends Activity  {
 						videoView.setVideoPath(mediaUri.getPath());
 						
 						
-						/// Creating thumbnails for video: http://android-er.blogspot.com/2011/05/create-thumbnail-for-video-using.html
+						/// Creating thumbnails for video from file: http://android-er.blogspot.com/2011/05/create-thumbnail-for-video-using.html
 				        // MINI_KIND: 512 x 384 thumbnail 
+						// MICRO_KIND: 96 x 96 thumbnail
 						imageTextView.setText("Video Thumbnail");
 						imageView.setImageBitmap(ThumbnailUtils.createVideoThumbnail(mediaUri.getPath(), Thumbnails.MINI_KIND));
 
@@ -570,7 +574,5 @@ public class MainActivity extends Activity  {
 			
 		
 	}
-		
-
 
 }

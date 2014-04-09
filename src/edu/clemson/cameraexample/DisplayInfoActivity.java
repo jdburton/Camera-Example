@@ -42,7 +42,7 @@ public class DisplayInfoActivity extends Activity {
         }
 
         // The about_text resource is the location of the HTML file.
-        String message = getResources().getString(R.string.about_text);
+        String message = getResources().getString(R.string.about_html_file);
 
         // Create the text view - html style.
         /// Webview information at http://stackoverflow.com/questions/3295381/android-html-resource-with-references-to-other-resources

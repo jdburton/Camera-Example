@@ -11,5 +11,6 @@
     <string name="action_take_video">Take Video</string> 
     <string name="about_text">About</string>
     <string name="title_activity_about_message">About Camera Example</string>
+    <string name="about_html_file">file:///android_asset/about.html</string>
 
 </resources>
