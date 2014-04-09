@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Camera Example</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_select_photo">Select Picture</string>
+    <string name="action_select_video">Select Video</string>
+    <string name="action_take_photo">Take Picture</string>
+    <string name="action_take_video_hd">Take HD Video</string>
+    <string name="action_take_video">Take Video</string> 
+    <string name="about_text">About</string>
+    <string name="title_activity_about_message">About Camera Example</string>
+
+</resources>
